@@ -1,6 +1,17 @@
-🚀 How to Run the Project (Local Setup)
+<div align="center">
+🎯 Assessment Score Dashboard
+Offline • Lightweight • Fully Customizable
 
-Download all files
+A simple assessment dashboard built with HTML, CSS & JavaScript that runs 100% locally — no setup, no internet, no dependencies.
+
+</div>
+🚀 Getting Started (Local Setup)
+
+Run the project in under 30 seconds
+
+📥 Steps
+
+Download the following files:
 
 index.html
 
@@ -8,15 +19,19 @@ styles.css
 
 script.js
 
-Open index.html in any modern browser (Chrome, Edge, Firefox).
+Open index.html in any modern browser
+✔ Chrome
+✔ Edge
+✔ Firefox
 
-✅ No setup required – the project runs fully offline and locally.
+✅ That’s it! The project runs completely offline.
 
-📊 Where Scores Are Stored
+📊 Score Configuration
 
-All assessment scores are stored at the top of script.js.
+All assessment scores are defined in one place for easy editing.
 
-// Line 1–30 in script.js
+📁 Location: script.js (Top of the file)
+
 const assessmentData = {
     overall: 7.5,
     skills: {
@@ -27,39 +42,38 @@ const assessmentData = {
     }
 };
 
-✏️ To Update Scores
 
-Edit the values inside the assessmentData object
+✨ This single object controls:
+
+Overall score
+
+Skill-wise evaluation
+
+Feedback messages
+
+UI colors & badges
+
+✏️ Updating Scores (Quick Edit)
+
+Modify scores without touching UI or logic
+
+Open script.js
+
+Change values inside assessmentData
 
 Save the file
 
 Refresh the browser
 
-Changes will reflect instantly.
+🔄 Updates apply instantly
 
-🔍 Feedback Logic
+🧠 Smart Feedback System
 
-Feedback is generated automatically based on score ranges.
+The project automatically generates feedback based on score ranges.
 
-Score Range	Category	Feedback Type
-8.0 – 9.0	Excellent	Strong Area
-7.0 – 7.9	Good	Good Performance
-6.0 – 6.9	Average	Practice Needed
-0.0 – 5.9	Needs Work	Review
-⚙️ How It Works
-
-Scores are checked inside the getFeedback() function
-
-Each score is matched to a predefined range
-
-Appropriate feedback message is selected
-
-Badges, colors, and indicators update automatically
-
-📁 Project Files Overview
-
-index.html – Main page containing all content
-
-styles.css – Complete styling and UI design
-
-script.js – Score data, charts, and feedback logic
+📌 Score Mapping
+Score Range	Performance Level	Feedback
+8.0 – 9.0	🌟 Excellent	Strong Area
+7.0 – 7.9	✅ Good	Good Performance
+6.0 – 6.9	⚠️ Average	Practice Needed
+0.0 – 5.9	❌ Needs Work	Review
