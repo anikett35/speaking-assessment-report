@@ -1,37 +1,35 @@
-<div align="center">
-🎯 Assessment Score Dashboard
-Offline • Lightweight • Fully Customizable
+# 🎯 Assessment Score Dashboard
 
-A simple assessment dashboard built with HTML, CSS & JavaScript that runs 100% locally — no setup, no internet, no dependencies.
+A lightweight, fully offline assessment dashboard built using **HTML, CSS, and JavaScript**.  
+Designed for easy customization, real-time feedback, and clean UI presentation.
 
-</div>
-🚀 Getting Started (Local Setup)
+---
 
-Run the project in under 30 seconds
+## 🚀 Getting Started (Local Setup)
 
-📥 Steps
+Follow these steps to run the project locally:
 
-Download the following files:
+1. Download all project files:
+   - `index.html`
+   - `styles.css`
+   - `script.js`
 
-index.html
+2. Open `index.html` in any modern browser:
+   - Google Chrome
+   - Microsoft Edge
+   - Mozilla Firefox
 
-styles.css
+✅ No installation or setup required.  
+✅ Works completely offline.
 
-script.js
+---
 
-Open index.html in any modern browser
-✔ Chrome
-✔ Edge
-✔ Firefox
+## 📊 Score Configuration
 
-✅ That’s it! The project runs completely offline.
+All assessment scores are stored at the top of the `script.js` file.
 
-📊 Score Configuration
-
-All assessment scores are defined in one place for easy editing.
-
-📁 Location: script.js (Top of the file)
-
+```javascript
+// Line 1–30 in script.js
 const assessmentData = {
     overall: 7.5,
     skills: {
@@ -41,39 +39,3 @@ const assessmentData = {
         grammar: 7.2
     }
 };
-
-
-✨ This single object controls:
-
-Overall score
-
-Skill-wise evaluation
-
-Feedback messages
-
-UI colors & badges
-
-✏️ Updating Scores (Quick Edit)
-
-Modify scores without touching UI or logic
-
-Open script.js
-
-Change values inside assessmentData
-
-Save the file
-
-Refresh the browser
-
-🔄 Updates apply instantly
-
-🧠 Smart Feedback System
-
-The project automatically generates feedback based on score ranges.
-
-📌 Score Mapping
-Score Range	Performance Level	Feedback
-8.0 – 9.0	🌟 Excellent	Strong Area
-7.0 – 7.9	✅ Good	Good Performance
-6.0 – 6.9	⚠️ Average	Practice Needed
-0.0 – 5.9	❌ Needs Work	Review
