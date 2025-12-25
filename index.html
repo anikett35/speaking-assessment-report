@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Assessment Report | EduMetric</title>
+    
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>EDUMETRIC</span>
+                </div>
+                <small class="brand-subtitle">Assessment Portal</small>
+            </a>
+            
+            <div class="navbar-actions">
+                <div class="user-info">
+                    <span class="user-name">Alex Doe</span>
+                    <span class="user-id">ID: 883391</span>
+                </div>
+                <div class="user-avatar">AD</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Header Section -->
+        <section class="report-header">
+            <div class="header-info">
+                <div class="date-badge">
+                    <i class="fas fa-calendar"></i>
+                    OCTOBER 24, 2023
+                </div>
+                <h1>Speaking Assessment Report</h1>
+                <div class="tags">
+                    <span class="tag language">
+                        <i class="fas fa-globe"></i> English
+                    </span>
+                    <span class="tag level">
+                        <i class="fas fa-signal"></i> Level: B2 Upper Intermediate
+                    </span>
+                </div>
+            </div>
+            
+            <button class="btn-download" id="downloadBtn">
+                <i class="fas fa-download"></i> Download Report
+            </button>
+        </section>
+
+        <!-- Score Overview -->
+        <section class="score-overview">
+            <div class="row g-4">
+                <!-- Overall Score -->
+                <div class="col-lg-4">
+                    <div class="card overall-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-trophy"></i> OVERALL BAND SCORE</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="score-display">
+                                <div class="score-circle" id="scoreCircle">
+                                    <canvas id="scoreChart"></canvas>
+                                    <div class="score-text">
+                                        <span class="score">7.5</span>
+                                        <span class="max-score">/ 9.0</span>
+                                    </div>
+                                </div>
+                                <div class="score-badge">
+                                    <i class="fas fa-check-circle"></i> Good Performance
+                                </div>
+                            </div>
+                            
+                            <div class="score-details">
+                                <div class="score-item">
+                                    <span>Pronunciation</span>
+                                    <div class="progress">
+                                        <div class="progress-bar pronunciation" style="width: 83%"></div>
+                                    </div>
+                                    <span class="score-value">7.5</span>
+                                </div>
+                                <div class="score-item">
+                                    <span>Fluency</span>
+                                    <div class="progress">
+                                        <div class="progress-bar fluency" style="width: 78%"></div>
+                                    </div>
+                                    <span class="score-value">7.0</span>
+                                </div>
+                                <div class="score-item">
+                                    <span>Vocabulary</span>
+                                    <div class="progress">
+                                        <div class="progress-bar vocabulary" style="width: 89%"></div>
+                                    </div>
+                                    <span class="score-value">8.0</span>
+                                </div>
+                                <div class="score-item">
+                                    <span>Grammar</span>
+                                    <div class="progress">
+                                        <div class="progress-bar grammar" style="width: 80%"></div>
+                                    </div>
+                                    <span class="score-value">7.2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Balance -->
+                <div class="col-lg-4">
+                    <div class="card skill-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-balance-scale"></i> Skill Balance</h3>
+                            <p>Compare where you're strongest</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="dot your-score"></span>
+                                    <span>Your Score</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="dot class-avg"></span>
+                                    <span>Class Average</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overall Feedback -->
+                <div class="col-lg-4">
+                    <div class="card feedback-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-star"></i> Overall Feedback</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="feedback-content">
+                                <p class="highlight">
+                                    <strong>Excellent work!</strong> Your overall score of <strong>7.5</strong> demonstrates strong speaking abilities suitable for academic and professional contexts.
+                                </p>
+                                <p>
+                                    You show great confidence in vocabulary usage, though there are minor opportunities to smooth out fluency and fine-tune pronunciation intonation.
+                                </p>
+                            </div>
+                            
+                            <div class="feedback-stats">
+                                <div class="stat">
+                                    <div class="stat-value">87%</div>
+                                    <div class="stat-label">Completion</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">92%</div>
+                                    <div class="stat-label">Accuracy</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">85%</div>
+                                    <div class="stat-label">Fluency</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Skills -->
+        <section class="detailed-skills">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-bar"></i> Detailed Skill Breakdown</h2>
+                <p>Individual component scores</p>
+                <a href="#" class="btn-view-rubric">
+                    View Rubric <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Pronunciation -->
+                <div class="col-md-6">
+                    <div class="skill-detail-card">
+                        <div class="skill-header">
+                            <div class="skill-icon pronunciation">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Pronunciation</h4>
+                                <p>Clarity & Intonation</p>
+                            </div>
+                            <div class="skill-score">
+                                <span class="score">7.5</span>
+                                <span class="max">/9</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>83%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar pronunciation" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-insight insight-review">
+                            <div class="insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Review Recommended</span>
+                            </div>
+                            <p>Your pronunciation is generally clear. You handle individual sounds well, but occasional stress on the wrong syllable in multi-syllabic words can affect rhythm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fluency -->
+                <div class="col-md-6">
+                    <div class="skill-detail-card">
+                        <div class="skill-header">
+                            <div class="skill-icon fluency">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Fluency</h4>
+                                <p>Flow & Coherence</p>
+                            </div>
+                            <div class="skill-score">
+                                <span class="score">7.0</span>
+                                <span class="max">/9</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar fluency" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-insight insight-practice">
+                            <div class="insight-header">
+                                <i class="fas fa-running"></i>
+                                <span>Practice Needed</span>
+                            </div>
+                            <p>Fluency is good, with a natural pace. However, there is some hesitation when searching for complex ideas. Try using more diverse filler phrases.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vocabulary -->
+                <div class="col-md-6">
+                    <div class="skill-detail-card">
+                        <div class="skill-header">
+                            <div class="skill-icon vocabulary">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Vocabulary</h4>
+                                <p>Lexical Resource</p>
+                            </div>
+                            <div class="skill-score">
+                                <span class="score">8.0</span>
+                                <span class="max">/9</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>89%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar vocabulary" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-insight insight-strong">
+                            <div class="insight-header">
+                                <i class="fas fa-trophy"></i>
+                                <span>Strong Area</span>
+                            </div>
+                            <p>Vocabulary usage is varied and precise. You successfully used several idiomatic expressions. Continue expanding your range of synonyms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grammar -->
+                <div class="col-md-6">
+                    <div class="skill-detail-card">
+                        <div class="skill-header">
+                            <div class="skill-icon grammar">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Grammar</h4>
+                                <p>Accuracy & Range</p>
+                            </div>
+                            <div class="skill-score">
+                                <span class="score">7.2</span>
+                                <span class="max">/9</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar grammar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-insight insight-good">
+                            <div class="insight-header">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Good Performance</span>
+                            </div>
+                            <p>Grammar structures are accurate for the most part. You use a mix of simple and complex sentences. Watch out for minor errors in article usage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="recommendations">
+            <div class="recommendations-header">
+                <h2><i class="fas fa-graduation-cap"></i> Personalized Recommendations</h2>
+                <p>Based on your performance analysis</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="recommendation-card">
+                        <div class="rec-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h4>Pronunciation Practice</h4>
+                        <p>Focus on sentence-level stress patterns. Use shadowing technique with TED Talks for 15 minutes daily.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="recommendation-card">
+                        <div class="rec-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Fluency Boost</h4>
+                        <p>Practice with 60-second impromptu speaking exercises daily to reduce hesitation and build confidence.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="recommendation-card">
+                        <div class="rec-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>Vocabulary Expansion</h4>
+                        <p>Learn 5 new academic collocations weekly and practice them in context through writing exercises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Trend -->
+        <section class="trend-section">
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="fas fa-chart-line"></i> Performance Trend</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-chart-line"></i>
+                    <span>EduMetric Assessment Portal</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                    <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    © 2023 EduMetric. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
