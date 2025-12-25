@@ -1,14 +1,22 @@
-Download all files (index.html, styles.css, script.js)
+🚀 How to Run the Project (Local Setup)
 
-Open index.html in any modern browser
+Download all files
 
-No setup required - runs locally!
+index.html
+
+styles.css
+
+script.js
+
+Open index.html in any modern browser (Chrome, Edge, Firefox).
+
+✅ No setup required – the project runs fully offline and locally.
 
 📊 Where Scores Are Stored
-All scores are stored in script.js at the top:
 
-javascript
-// Line 1-30 in script.js
+All assessment scores are stored at the top of script.js.
+
+// Line 1–30 in script.js
 const assessmentData = {
     overall: 7.5,
     skills: {
@@ -18,35 +26,40 @@ const assessmentData = {
         grammar: 7.2
     }
 };
-To Update Scores:
-Edit values in assessmentData object
 
-Save file
+✏️ To Update Scores
 
-Refresh browser
+Edit the values inside the assessmentData object
+
+Save the file
+
+Refresh the browser
+
+Changes will reflect instantly.
 
 🔍 Feedback Logic
-Feedback is generated automatically based on score ranges:
 
-Score	Category	Feedback Type
-8.0-9.0	Excellent	"Strong Area"
-7.0-7.9	Good	"Good Performance"
-6.0-6.9	Average	"Practice Needed"
-0.0-5.9	Needs Work	"Review"
-How It Works:
-Check score in getFeedback() function
+Feedback is generated automatically based on score ranges.
 
-Match to range (Excellent/Good/Average/Needs Work)
+Score Range	Category	Feedback Type
+8.0 – 9.0	Excellent	Strong Area
+7.0 – 7.9	Good	Good Performance
+6.0 – 6.9	Average	Practice Needed
+0.0 – 5.9	Needs Work	Review
+⚙️ How It Works
 
-Display appropriate message
+Scores are checked inside the getFeedback() function
 
-Update badges and colors automatically
+Each score is matched to a predefined range
 
-📁 Files
-index.html - Main page with all content
+Appropriate feedback message is selected
 
-styles.css - All styling and design
+Badges, colors, and indicators update automatically
 
-script.js - Scores, charts, and feedback logic
+📁 Project Files Overview
 
-🌐 Live Demo
+index.html – Main page containing all content
+
+styles.css – Complete styling and UI design
+
+script.js – Score data, charts, and feedback logic
